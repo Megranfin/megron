@@ -2,7 +2,7 @@
 
 **Cross-border payments, built on Stellar — send and receive money globally, convertible to local currency.**
 
-Megron is an open-source payment infrastructure that lets anyone send and receive money across borders using the Stellar network. Payments settle in seconds, fees are negligible, and recipients can convert funds directly to their local currency — no bank account required, no intermediaries, no waiting.
+Megron is an open-source payment infrastructure that lets anyone send and receive money across borders using the Stellar network. recipients can convert funds directly to their local currency — no bank account required, no intermediaries, no waiting.
 
 Built for freelancers, gig workers, and businesses operating across borders, Megron ships three core features:
 
@@ -105,67 +105,7 @@ megron/
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js v18+
-- Rust toolchain (for Soroban contract development)
-- [Freighter Wallet](https://freighter.app) browser extension
-- Stellar Testnet account via [Stellar Laboratory](https://laboratory.stellar.org)
-
-### Installation
-
-```bash
-git clone https://github.com/Megron1/megron.git
-cd megron
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-```
-
-### Environment Configuration
-
-```bash
-cp .env.example .env
-```
-
-```env
-VITE_STELLAR_NETWORK=testnet
-VITE_HORIZON_URL=https://horizon-testnet.stellar.org
-VITE_SOROBAN_RPC_URL=https://soroban-testnet.stellar.org
-VITE_USDC_ASSET_CODE=USDC
-VITE_USDC_ISSUER=GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5
-```
-
-### Run Locally
-
-```bash
-npm run dev
-```
-
-### Build & Deploy Smart Contracts
-
-```bash
-cd contract
-
-# Build
-cargo build --target wasm32-unknown-unknown --release
-
-# Deploy subscription contract to testnet
-stellar contract deploy \
-  --wasm target/wasm32-unknown-unknown/release/megron_subscription.wasm \
-  --network testnet \
-  --source <YOUR_ACCOUNT>
-
-# Deploy escrow contract to testnet
-stellar contract deploy \
-  --wasm target/wasm32-unknown-unknown/release/megron_escrow.wasm \
-  --network testnet \
-  --source <YOUR_ACCOUNT>
-```
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions, environment configuration, and how to deploy the smart contracts locally.
 
 ---
 
@@ -202,12 +142,6 @@ Open-source development and community grants are how infrastructure like this ge
 ## Contributing
 
 Megron is open source and welcomes contributions. Please open an issue before submitting a pull request for significant changes.
-
-```bash
-git checkout -b feature/your-feature-name
-git commit -m "feat: describe your change"
-git push origin feature/your-feature-name
-```
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
