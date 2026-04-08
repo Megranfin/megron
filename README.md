@@ -4,7 +4,11 @@
 
 Megron is an open-source payment infrastructure that lets anyone send and receive money across borders using the Stellar network. Payments settle in seconds, fees are negligible, and recipients can convert funds directly to their local currency — no bank account required, no intermediaries, no waiting.
 
-Built for freelancers, gig workers, and businesses operating across borders, Megron pairs seamless cross-border transfers with on-chain subscription billing and milestone-based escrow — giving users a complete financial toolkit that works anywhere in the world.
+Built for freelancers, gig workers, and businesses operating across borders, Megron ships three core features:
+
+- **Personal Finance Dashboard** — a real-time view of every transaction in your Stellar wallet, automatically categorized so you always know where your money is going.
+- **Trustless Subscription Billing** — recurring payments enforced by Soroban smart contracts, with no intermediary, no chargebacks, and full on-chain transparency.
+- **Gig Worker Payments & Escrow** — milestone-based escrow that releases funds the moment work is confirmed, settling in seconds for fractions of a cent.
 
 ---
 
