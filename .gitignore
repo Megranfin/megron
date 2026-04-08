@@ -1,6 +1,8 @@
 # Dependencies
 node_modules/
 
+.vscode 
+
 # Build outputs
 .next/
 dist/
