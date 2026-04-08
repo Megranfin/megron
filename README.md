@@ -108,16 +108,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions, environment con
 ---
 
 
-## Why This Project Deserves Funding
-
-Financial infrastructure should be open, permissionless, and globally accessible. Megron is building tooling that does not exist on Stellar today in a cohesive form — a full-stack application that makes on-chain money management as intuitive as a consumer banking app, while removing every dependency on traditional financial intermediaries.
-
-The gig economy is global. Subscribers and creators are global. Megron's target users are not just crypto-native early adopters — they are the freelancer in Southeast Asia waiting three weeks for a wire transfer, the independent contractor who can't get a business bank account, and the small business that wants to bill customers without surrendering a percentage to a payment processor. Stellar's architecture makes serving all of them possible. Megron makes it practical.
-
-Open-source development and community grants are how infrastructure like this gets built. Funding through Drips directly enables continued development of the smart contracts, frontend application, and documentation that make Megron usable by real people.
-
----
-
 ## Contributing
 
 Megron is open source and welcomes contributions. Please open an issue before submitting a pull request for significant changes.
