@@ -31,6 +31,8 @@ pub struct SubscriptionContract;
 impl SubscriptionContract {
     /// Create a new recurring subscription.
     /// `interval` is in seconds (e.g. 2_592_000 = 30 days).
+    /// The subscriber must have approved an allowance to this contract
+    /// via `token.approve(subscriber, contract, amount * n, expiry)` beforehand.
     pub fn subscribe(
         env: Env,
         subscriber: Address,
@@ -61,6 +63,7 @@ impl SubscriptionContract {
 
     /// Execute the next payment if it is due.
     /// Anyone can call this — the contract enforces the schedule.
+    /// Uses transfer_from so the contract pulls from the subscriber's allowance.
     pub fn charge(env: Env) -> i128 {
         let mut sub: Subscription = env.storage().persistent().get(&SUB).expect("no subscription");
 
@@ -69,8 +72,15 @@ impl SubscriptionContract {
         let now = env.ledger().timestamp();
         assert!(now >= sub.next_payment, "payment not yet due");
 
-        let client = token::Client::new(&env, &sub.token);
-        client.transfer(&sub.subscriber, &sub.recipient, &sub.amount);
+        let contract_address = env.current_contract_address();
+        let token_client = token::Client::new(&env, &sub.token);
+        // Pull from subscriber's pre-approved allowance
+        token_client.transfer_from(
+            &contract_address,
+            &sub.subscriber,
+            &sub.recipient,
+            &sub.amount,
+        );
 
         sub.next_payment += sub.interval;
         env.storage().persistent().set(&SUB, &sub);
@@ -143,6 +153,12 @@ mod tests {
         let interval = 2_592_000_u64;
         client.subscribe(&subscriber, &recipient, &token, &500, &interval);
 
+        // Approve the contract to pull from subscriber's balance
+        let contract_id = client.address.clone();
+        let token_client = TokenClient::new(&env, &token);
+        let expiry_ledger = env.ledger().sequence() + 10_000;
+        token_client.approve(&subscriber, &contract_id, &10_000, &expiry_ledger);
+
         // Advance ledger time past the first payment due date
         let now = env.ledger().timestamp();
         env.ledger().set(LedgerInfo {
@@ -160,7 +176,6 @@ mod tests {
         assert_eq!(charged, 500);
 
         // Recipient should have received the funds
-        let token_client = TokenClient::new(&env, &token);
         assert_eq!(token_client.balance(&recipient), 500);
 
         // next_payment should have advanced by one interval
