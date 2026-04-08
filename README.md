@@ -1,16 +1,18 @@
 # Megron
 
-**On-chain personal finance, subscription billing, and gig worker payments — built on Stellar.**
+**Cross-border payments, built on Stellar — send and receive money globally, convertible to local currency.**
 
-Megron is an open-source financial infrastructure layer that brings trustless money management to anyone with a Stellar wallet. It combines a real-time spending dashboard, Soroban-powered recurring billing, and instant escrow payments into a single, non-custodial application — no bank account required.
+Megron is an open-source payment infrastructure that lets anyone send and receive money across borders using the Stellar network. Payments settle in seconds, fees are negligible, and recipients can convert funds directly to their local currency — no bank account required, no intermediaries, no waiting.
+
+Built for freelancers, gig workers, and businesses operating across borders, Megron pairs seamless cross-border transfers with on-chain subscription billing and milestone-based escrow — giving users a complete financial toolkit that works anywhere in the world.
 
 ---
 
 ## The Problem
 
-Over 1.4 billion adults worldwide remain unbanked, yet the global gig economy continues to grow. Freelancers and independent workers face a fundamental contradiction: they generate real economic value but are routinely excluded from the financial tools needed to manage it. Traditional subscription billing relies on centralized payment processors that charge high fees, enforce geographic restrictions, and require banking infrastructure that millions simply don't have. At the same time, crypto-native users lack a coherent way to track and categorize on-chain spending — the equivalent of a bank statement doesn't exist for most blockchain wallets.
+Sending money across borders is still slow, expensive, and exclusionary. Payment processors charge high fees, enforce geographic restrictions, and require banking infrastructure that over 1.4 billion adults simply don't have access to. Freelancers wait weeks for wire transfers. Gig workers can't get paid by international clients. Small businesses lose a significant cut of every transaction to intermediaries.
 
-Megron solves all three problems at once.
+Megron removes all of that friction.
 
 ---
 
