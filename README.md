@@ -101,13 +101,6 @@ megron/
 
 ---
 
-## Getting Started
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions, environment configuration, and how to deploy the smart contracts locally.
-
----
-
-
 ## Contributing
 
 Megron is open source and welcomes contributions. Please open an issue before submitting a pull request for significant changes.
