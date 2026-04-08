@@ -11,6 +11,11 @@ target/
 .env.local
 .env.*.local
 
+# Soroban test snapshots
+contract/test_snapshots/
+
 # Misc
 .DS_Store
 *.log
+
+
