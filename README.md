@@ -107,25 +107,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions, environment con
 
 ---
 
-## Project Status & Roadmap
-
-Megron is in active development. The following reflects current progress and planned milestones:
-
-| Milestone                                 | Status         |
-| ----------------------------------------- | -------------- |
-| Wallet connection & Freighter integration | ✅ Complete    |
-| Transaction history & Horizon indexing    | ✅ Complete    |
-| Spending categorization engine            | ✅ Complete    |
-| Personal finance dashboard UI             | ✅ Complete    |
-| Soroban subscription contract             | 🔄 In Progress |
-| Gig worker escrow contract                | 🔄 In Progress |
-| Subscription management UI                | 🔜 Planned     |
-| Escrow payment flow UI                    | 🔜 Planned     |
-| Stellar DEX swap integration              | 🔜 Planned     |
-| Mobile app (React Native)                 | 🔜 Planned     |
-| Mainnet launch                            | 🔜 Planned     |
-
----
 
 ## Why This Project Deserves Funding
 
@@ -143,10 +124,4 @@ Megron is open source and welcomes contributions. Please open an issue before su
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
----
 
-## License
-
-MIT © 2025 Megron
-
-> Megron is an independent open-source project. It is not affiliated with the Stellar Development Foundation.
