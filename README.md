@@ -1,8 +1,6 @@
 # Megron
 
-**Cross-border payments, built on Stellar — send and receive money globally, convertible to local currency.**
-
-Megron is an open-source payment infrastructure that lets anyone send and receive money across borders using the Stellar network. recipients can convert funds directly to their local currency — no bank account required, no intermediaries, no waiting.
+Megron is an open-source payment infrastructure that lets anyone send and receive money across borders using the Stellar network. recipients can convert funds directly to their local currency.
 
 Built for freelancers, gig workers, and businesses operating across borders, Megron ships three core features:
 
