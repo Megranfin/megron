@@ -1,9 +1,16 @@
-[workspace]
-members = [
-    "megron-subscription",
-    "megron-escrow",
-]
-resolver = "2"
+[package]
+name = "megron"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+soroban-sdk = { version = "25.3.0", features = ["alloc"] }
+
+[dev-dependencies]
+soroban-sdk = { version = "25.3.0", features = ["testutils"] }
 
 [profile.release]
 opt-level = "z"
@@ -14,3 +21,7 @@ debug-assertions = false
 panic = "abort"
 codegen-units = 1
 lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true
